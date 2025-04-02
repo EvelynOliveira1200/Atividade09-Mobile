@@ -30,10 +30,9 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: 20,
+        padding: 10,
         backgroundColor: "#fff",
         height: 100,
-
     },
     logo: {
         width: 150,

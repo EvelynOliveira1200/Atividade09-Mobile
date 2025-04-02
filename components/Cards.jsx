@@ -1,21 +1,21 @@
 import { View, Text, StyleSheet } from "react-native";
 import { Image } from "expo-image";
 
-export default function Cards() {
+export default function Cards({ imageSource, title, price, iconSource }) {
     return (
         <View style={styles.cards}>
             <Image
-                source={require("../img/macarrons2.jpg")}
+                source={imageSource}
                 style={styles.card}
                 contentFit="contain"
             />
             <View style={styles.texto}>
-                <Text style={styles.text1}>Macarrons</Text>
-                <Text style={styles.text2}>R$ 25,00</Text>
+                <Text style={styles.text1}>{title}</Text>
+                <Text style={styles.text2}>{price}</Text>
             </View>
-            <View style={styles.icon}>
+            <View style={styles.iconContainer}>
                 <Image
-                    source={require("../img/car.png")}
+                    source={iconSource}
                     style={styles.icon}
                     contentFit="contain"
                 />
@@ -52,10 +52,12 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: "#888",
     },
+    iconContainer: {
+        padding: 10,
+        marginRight: 20,
+    },
     icon: {
         width: 25,
         height: 25,
-        padding: 10,
-        marginRight: 20,
     },
 });
